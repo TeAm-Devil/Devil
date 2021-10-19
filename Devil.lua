@@ -142,7 +142,7 @@ DevId = Config.DevId
 SudoIds = {Config.SudoIds,1558668590,804928088}
 Devil = Config.Devil
 TokenBot = Config.TokenBot
-NameBot = (DevRio:get(Devil..'Rio:NameBot') or 'تروكس')
+NameBot = (DevRio:get(Devil..'Rio:NameBot') or 'ديفل')
 --     Source Devil     --
 FilesPrint = "\27[35m".."\nAll Source Files Started ↬ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"..'\27[m'
 FilesNumber = 0
@@ -413,7 +413,7 @@ end
 function AddFileSource(msg,chat,ID_FILE,File_Name)
 if File_Name:match('.lua') then
 if File_Name ~= "Devil.lua" then 
-send(chat,msg.id_," ᥀︙هذا الملف ليس تابع لسورس تروكس")
+send(chat,msg.id_," ᥀︙هذا الملف ليس تابع لسورس ديفل")
 return false 
 end      
 local File = json:decode(https.request('https://api.telegram.org/bot'..TokenBot..'/getfile?file_id='..ID_FILE) ) 
@@ -3045,8 +3045,8 @@ end
 DevRio:del(Devil.."Del:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_)
 return false
 end
-if text and text:match('^'..(DevRio:get(Devil..'Rio:NameBot') or "تروكس")..' ') then
-data.message_.content_.text_ = data.message_.content_.text_:gsub('^'..(DevRio:get(Devil..'Rio:NameBot') or "تروكس")..' ','')
+if text and text:match('^'..(DevRio:get(Devil..'Rio:NameBot') or "ديفل")..' ') then
+data.message_.content_.text_ = data.message_.content_.text_:gsub('^'..(DevRio:get(Devil..'Rio:NameBot') or "ديفل")..' ','')
 end
 if data.message_.content_.text_ then
 local NewCmmd = DevRio:get(Devil.."Set:Cmd:Group:New1"..msg.chat_id_..":"..data.message_.content_.text_)
@@ -3359,7 +3359,7 @@ end
 if ChatType == 'pv' then 
 if text == '/start' or text == '↫ رجوع ᥀' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '᥀︙مرحبا عزيزي المطور \n᥀︙انت المطور الاساسي هنا \n᥀︙اليك ازرار سورس تروكس \n᥀︙تستطيع التحكم بكل الاوامر فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '᥀︙مرحبا عزيزي المطور \n᥀︙انت المطور الاساسي هنا \n᥀︙اليك ازرار سورس ديفل \n᥀︙تستطيع التحكم بكل الاوامر فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ السورس ᥀','وضع اسم البوت'},
 {'↫  المطورين ᥀','↫ الاحصائيات ᥀'},
@@ -3372,7 +3372,7 @@ return false
 end end
 if text == '↫ تعيين كلايش الاوامر ᥀' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي المطور \n᥀︙اليك الازرار الخاصه بتعديل وتغيير كلايش سورس تروكس فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي المطور \n᥀︙اليك الازرار الخاصه بتعديل وتغيير كلايش سورس ديفل فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'تغير معلومات الترحيب'},
 {'حذف كليشة الايدي','تعيين كليشة الايدي'},
@@ -3387,7 +3387,7 @@ return false
 end end
 if text == '↫ السورس ᥀' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي المطور \n᥀︙اليك الازرار الخاصه بتحديث  سورس تروكس فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي المطور \n᥀︙اليك الازرار الخاصه بتحديث  سورس ديفل فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ تحديث السورس ᥀','↫ تحديث ᥀'},
 {'↫ السيرفر ᥀'},
@@ -3400,7 +3400,7 @@ return false
 end end
 if text == '↫ الاحصائيات ᥀' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي المطور \n᥀︙اليك الازرار الخاصه ب أحصائيات  سورس تروكس فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي المطور \n᥀︙اليك الازرار الخاصه ب أحصائيات  سورس ديفل فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫  الاحصائيات ᥀'},
 {'↫ المشتركين ᥀','↫ المجموعات ᥀'},
@@ -3414,7 +3414,7 @@ return false
 end end
 if text == '↫  المطورين ᥀' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي المطور \n᥀︙اليك الازرار الخاصه ب المطورين لسورس تروكس فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي المطور \n᥀︙اليك الازرار الخاصه ب المطورين لسورس ديفل فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ الاساسيين ᥀','مسح الاساسيين'},
 {'↫ الثانويين ᥀','مسح الثانويين'},
@@ -3427,7 +3427,7 @@ return false
 end end
 if text == '↫ التفعيل والتعطيل ᥀' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي المطور \n᥀︙اليك الازرار الخاصه ب التفعيل والتعطيل لسورس تروكس فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي المطور \n᥀︙اليك الازرار الخاصه ب التفعيل والتعطيل لسورس ديفل فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ تعطيل التواصل ᥀','↫ تفعيل التواصل ᥀'},
 {'↫ تعطيل ترحيب البوت ᥀','↫ تفعيل ترحيب البوت ᥀'},
@@ -3442,7 +3442,7 @@ return false
 end end
 if text == '↫ الاذاعه ᥀' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي المطور \n᥀︙اليك الازرار الخاصه بالاذاعه لسورس تروكس فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي المطور \n᥀︙اليك الازرار الخاصه بالاذاعه لسورس ديفل فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ اذاعه بالتثبيت ᥀'},
 {'↫ اذاعه خاص ᥀','↫ اذاعه عام ᥀'},
@@ -3455,7 +3455,7 @@ return false
 end end
 if text == '↫ العام ᥀' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي المطور \n᥀︙اليك الازرار الخاصه بالعام لسورس تروكس فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي المطور \n᥀︙اليك الازرار الخاصه بالعام لسورس ديفل فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ اضف رد عام ᥀','↫ حذف رد عام ᥀'},
 {'↫ ردود العام ᥀','↫ مسح ردود العام ᥀'},
@@ -3467,7 +3467,7 @@ return false
 end end
 if text == '↫ ردود الخاص ᥀' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي المطور \n᥀︙اليك الازرار الخاصه بردود الخاص لسورس تروكس فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي المطور \n᥀︙اليك الازرار الخاصه بردود الخاص لسورس ديفل فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ تعيين رد الخاص ᥀','↫ حذف رد الخاص ᥀'},
 {'↫ جلب رد الخاص ᥀'},
@@ -3478,7 +3478,7 @@ return false
 end end
 if text == '↫ الاشتراك الاجباري ᥀' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي المطور \n᥀︙اليك الازرار الخاصه بالاشتراك الاجباري لسورس تروكس فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي المطور \n᥀︙اليك الازرار الخاصه بالاشتراك الاجباري لسورس ديفل فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫  تفعيل الاشتراك الاجباري ᥀','↫  تعطيل الاشتراك الاجباري ᥀'},
 {'↫ تعيين قناة الاشتراك ᥀',' ↫ حذف قناة الاشتراك ᥀'},
@@ -3490,7 +3490,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ الاوامر الخدميه ᥀' or text == '/play' or text == '↫  رجوع  ᥀' or text == 'اوامر الخدميه' or text == '/free' then
-local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي \n᥀︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس تروكس فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي \n᥀︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس ديفل فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ اوامر التسليه ᥀','↫ الاوامر الخدميه  ᥀'},
 {'↫ اوامر النسب ᥀'},
@@ -3502,7 +3502,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
 if text == '↫ اوامر التسليه ᥀' then 
-local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي \n᥀︙اليك الازرار الخاصه بأوامر التسليه الخاصه بسورس تروكس فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي \n᥀︙اليك الازرار الخاصه بأوامر التسليه الخاصه بسورس ديفل فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ غنيلي ᥀','↫ اغنيه ᥀'},
 {'↫ ميمز ᥀','↫ ريمكس ᥀'},
@@ -3514,7 +3514,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
 if text == '↫ الاوامر الخدميه  ᥀' then 
-local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي \n᥀︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس تروكس فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي \n᥀︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس ديفل فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ الابراج ᥀','↫ حساب العمر ᥀'},
 {'↫ الزخرفه ᥀','↫ معاني الاسماء ᥀'},
@@ -3527,7 +3527,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
 if text == '↫ اوامر النسب ᥀' then 
-local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي \n᥀︙اليك الازرار الخاصه بأوامر النسب الخاصه بسورس تروكس فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي \n᥀︙اليك الازرار الخاصه بأوامر النسب الخاصه بسورس ديفل فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ نسبه الكره ᥀','↫ نسبه الحب ᥀'},
 {'↫ نسبه الرجوله ᥀','↫ نسبه الانوثه ᥀'},
@@ -3539,7 +3539,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
 if text == '↫ العاب ᥀' then 
-local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي \n᥀︙اليك الازرار الخاصه بألعاب سورس تروكس فقط اضغط على اللعبه الذي تريد لعبها'
+local Sudo_Welcome = '᥀︙اهلا بك مجددا عزيزي \n᥀︙اليك الازرار الخاصه بألعاب سورس ديفل فقط اضغط على اللعبه الذي تريد لعبها'
 local key = {
 {'↫ الالعاب ᥀','↫ الالعاب المتطوره ᥀'},
 {'↫ كت ᥀'},
@@ -5091,7 +5091,7 @@ end end
 if SecondSudo(msg) then
 if text == 'جلب نسخه الكروبات' and ChCheck(msg) or text == 'جلب نسخه احتياطيه' and ChCheck(msg) or text == 'جلب النسخه الاحتياطيه' and ChCheck(msg) or text == '↫ جلب نسخه احتياطيه ᥀' and ChCheck(msg) then
 local List = DevRio:smembers(Devil..'Rio:Groups') 
-local BotName = (DevRio:get(Devil.."Rio:NameBot") or 'تروكس')
+local BotName = (DevRio:get(Devil.."Rio:NameBot") or 'ديفل')
 local GetJson = '{"BotId": '..Devil..',"BotName": "'..BotName..'","GroupsList":{'  
 for k,v in pairs(List) do 
 LinkGroups = DevRio:get(Devil.."Rio:Groups:Links"..v)
@@ -5296,21 +5296,21 @@ end
 --     Source Devil     --
 if ChatType == 'sp' or ChatType == 'gp' or ChatType == 'pv' then
 if text == 'بوت' or text == 'بوتت' then 
-NameBot = (DevRio:get(Devil..'Rio:NameBot') or 'تروكس')
+NameBot = (DevRio:get(Devil..'Rio:NameBot') or 'ديفل')
 local DevilTeam = {' كول حبيبي ؟ اني '..NameBot..' ',' وياك القميل '..NameBot..' ',' اسمي القميل '..NameBot..' '}
 DevRio2 = math.random(#DevilTeam) 
 Dev_Rio(msg.chat_id_, msg.id_, 1, DevilTeam[DevRio2] , 1, 'html') 
 return false
 end
 if text == 'اسم البوت' or text == 'البوت شنو اسمه' or text == 'شسمه البوت' or text == 'البوت شسمه' then
-NameBot = (DevRio:get(Devil..'Rio:NameBot') or 'تروكس') 
+NameBot = (DevRio:get(Devil..'Rio:NameBot') or 'ديفل') 
 local DevilTeam = {"اسمي القميل "..NameBot.." "} 
 DevRio2 = math.random(#DevilTeam) 
 Dev_Rio(msg.chat_id_, msg.id_, 1, DevilTeam[DevRio2] , 1, 'html') 
 return false
 end
-if text and text == (DevRio:get(Devil..'Rio:NameBot') or 'تروكس') then 
-NameBot = (DevRio:get(Devil..'Rio:NameBot') or 'تروكس')
+if text and text == (DevRio:get(Devil..'Rio:NameBot') or 'ديفل') then 
+NameBot = (DevRio:get(Devil..'Rio:NameBot') or 'ديفل')
 local namebot = {'كول حبيبي ؟ اني '..NameBot..' ',' وياك القميل '..NameBot..' '} 
 name = math.random(#namebot) 
 Dev_Rio(msg.chat_id_, msg.id_, 1, namebot[name] , 1, 'html') 
@@ -12948,12 +12948,12 @@ end
 if text and text:match('^بحث (.*)$') and not DevRio:get(Devil.."Rio:WhyTube"..msg.chat_id_) and ChCheck(msg) then            
 local Text = text:match('^بحث (.*)$') 
 local msg_id = msg.id_/2097152/0.5 
-https.request('http://rio.aba.vg/Devil/Yt.phpPut=Search&TokenBot='..TokenBot..'&ChatId='..msg.chat_id_..'&UserId='..msg.sender_user_id_..'&Text='..URL.escape(Text)..'&MsgId='..msg_id..'&Name='..DirName)
+https.request('http://rio.aba.vg/Devil/Yt.php?Put=Search&TokenBot='..TokenBot..'&ChatId='..msg.chat_id_..'&UserId='..msg.sender_user_id_..'&Text='..URL.escape(Text)..'&MsgId='..msg_id..'&Name='..DirName)
 end
 --     Source Devil     --
 if SecondSudo(msg) then
 if text == "تحديث السورس" and ChCheck(msg) or text == "تحديث سورس" and ChCheck(msg) or text == "↫ تحديث السورس ᥀" and ChCheck(msg) then 
-Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙جاري تحديث سورس تروكس', 1, 'md') 
+Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙جاري تحديث سورس ديفل', 1, 'md') 
 os.execute('rm -rf Devil.lua') 
 os.execute('wget https://raw.githubusercontent.com/TeAm-Devil/Devil/master/Devil.lua') 
 dofile('Devil.lua') 
@@ -12973,7 +12973,7 @@ local Users = DevRio:smembers(Devil.."User_Bot")
 local Groups = DevRio:smembers(Devil..'Chek:Groups')
 local Sudos = DevRio:smembers(Devil.."Sudo:User")
 if DevRio:get(Devil..'Name:Bot') then
-DevRio:set(Devil..'Rio:NameBot',(DevRio:get(Devil..'Name:Bot') or 'تروكس'))
+DevRio:set(Devil..'Rio:NameBot',(DevRio:get(Devil..'Name:Bot') or 'ديفل'))
 end
 for i = 1, #Users do
 local id = Users[i]
@@ -13042,7 +13042,7 @@ if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
-local TextS = "\n᥀︙قائمة ملفات متجر سورس تروكس\n᥀︙الملفات المتوفره حاليا ↫ ⤈\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
+local TextS = "\n᥀︙قائمة ملفات متجر سورس ديفل\n᥀︙الملفات المتوفره حاليا ↫ ⤈\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 local TextE = "┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n᥀︙علامة ↫ (✔) تعني الملف مفعل\n᥀︙علامة ↫ (✖️) تعني الملف معطل\n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
