@@ -1,9 +1,9 @@
- #!/usr/bin/env bash
+#!/usr/bin/env bash
 THIS_DIR=$(cd $(dirname $0); pwd)
 Version=`lsb_release -rs | cut -f1 -d"."`
 install() {
 echo -e "\033[0;36m"
-echo -e "~ Welcome To Source Devil - اهلا بك في سورس ديفل~"
+echo -e "~ Welcome To Source Devil - اهلا بك في سورس ديفل ~"
 echo -e "     ~ { Setting Up Offices - جاري رفع المكاتب } ~"
 echo -e "\033[0m"
 sudo apt-get update -y
@@ -43,10 +43,10 @@ sudo luarocks install luautf8
 cd .. ;sudo rm -rf luarocks*
 sudo timedatectl set-timezone Asia/Baghdad
 echo -e "\033[0;36m"
-echo -e "Source Devil"
+echo -e "TeAm Devil"
 echo -e "\033[0m"
 cd $THIS_DIR && sudo chmod +x tg
-lua DevilDevil.lua
+lua Devil.lua
 }
 if [ "$1" = "install" ]; then
 install
